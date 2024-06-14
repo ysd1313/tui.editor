@@ -1,6 +1,6 @@
 {
-  "name": "@my-awesome-editor/react-editor",
-  "version": "1.0.0",
+  "name": "my-awesome13-react-editor",
+  "version": "1.0.1",
   "description": "TOAST UI Editor for React",
   "files": [
     "dist",
@@ -31,6 +31,6 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "@my-awesome-editor/editor": "^1.0.0"
+    "my-awesome13-editor": "^1.0.0"
   }
 }
