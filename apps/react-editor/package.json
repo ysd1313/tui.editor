@@ -1,5 +1,5 @@
 {
-  "name": "my-awesome-editor-react",
+  "name": "@my-awesome-editor/react-editor",
   "version": "1.0.0",
   "description": "TOAST UI Editor for React",
   "files": [
@@ -15,6 +15,11 @@
     "build": "webpack build && rollup -c"
   },
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ysd1313/tui.editor.git",
+    "directory": "apps/react-editor"
+  },
   "license": "MIT",
   "browserslist": "last 2 versions, ie 11",
   "peerDependencies": {
@@ -26,6 +31,6 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "my-awesome-editor": "^1.0.0"
+    "@my-awesome-editor/editor": "^1.0.0"
   }
 }

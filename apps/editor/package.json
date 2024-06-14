@@ -1,19 +1,8 @@
 {
-  "name": "@toast-ui/editor",
-  "version": "3.2.2",
+  "name": "@my-awesome-editor/editor",
+  "version": "1.0.0",
   "description": "GFM  Markdown Wysiwyg Editor - Productive and Extensible",
-  "keywords": [
-    "nhn",
-    "nhn cloud",
-    "toast",
-    "toastui",
-    "toast-ui",
-    "markdown",
-    "wysiwyg",
-    "editor",
-    "preview",
-    "gfm"
-  ],
+  "keywords": [],
   "main": "dist/toastui-editor.js",
   "module": "dist/esm/",
   "exports": {
@@ -48,17 +37,14 @@
     "dist/i18n",
     "types"
   ],
-  "author": "NHN Cloud FE Development Lab <dl_javascript@nhn.com>",
+  "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/ysd1313/tui.editor.git",
     "directory": "apps/editor"
   },
-  "bugs": {
-    "url": "https://github.com/nhn/tui.editor/issues"
-  },
-  "homepage": "https://ui.toast.com",
+  "homepage": "",
   "browserslist": "last 2 versions, not ie <= 10",
   "scripts": {
     "lint": "eslint .",
