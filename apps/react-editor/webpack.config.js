@@ -13,13 +13,13 @@ const config = {
     },
   },
   externals: {
-    '@toast-ui/editor': {
-      commonjs: '@toast-ui/editor',
-      commonjs2: '@toast-ui/editor',
+    'my-awesome13-editor': {
+      commonjs: 'my-awesome13-editor',
+      commonjs2: 'my-awesome13-editor',
     },
-    '@toast-ui/editor/dist/toastui-editor-viewer': {
-      commonjs: '@toast-ui/editor/dist/toastui-editor-viewer',
-      commonjs2: '@toast-ui/editor/dist/toastui-editor-viewer',
+    'my-awesome13-editor/dist/toastui-editor-viewer': {
+      commonjs: 'my-awesome13-editor/dist/toastui-editor-viewer',
+      commonjs2: 'my-awesome13-editor/dist/toastui-editor-viewer',
     },
     react: {
       commonjs: 'react',

@@ -1,6 +1,6 @@
 {
   "name": "my-awesome13-react-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TOAST UI Editor for React",
   "files": [
     "dist",
