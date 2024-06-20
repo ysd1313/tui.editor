@@ -64,15 +64,14 @@ export class Link extends Mark {
     return (payload) => (state, dispatch) => {
       const { linkUrl, linkText = '' } = payload!;
       const { schema, tr, selection } = state;
-      const { empty, from, to } = selection;
+      const { from, to } = selection;
 
       if (from && to && linkUrl) {
         const attrs = { linkUrl };
         const mark = schema.mark('link', attrs);
 
-        if (empty && linkText) {
+        if (linkText) {
           const node = createTextNode(schema, linkText, mark);
-
           tr.replaceRangeWith(from, to, node);
         } else {
           tr.addMark(from, to, mark);
