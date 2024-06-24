@@ -6,6 +6,7 @@
   </head>
   <body>
     <div id="editor"></div>
+    <div id="viewer"></div>
     <!-- Editor -->
     <script type="module">
       import { Editor } from '/dist/index.js';
@@ -62,6 +63,25 @@
       });
 
       window.editor = editor;
+    </script>
+    <!-- Viewer -->
+    <script type="module">
+        import Viewer from '/dist/viewer.js';
+
+        const content = 'below br\n' +
+            '\n' +
+            'above br\n' +
+            '\n' +
+            'text1\n' +
+            'text2';
+
+        const viewer = new Viewer({
+            el: document.querySelector('#viewer'),
+            height: '400px',
+            initialValue: content,
+        });
+
+        window.viewer = viewer;
     </script>
   </body>
 </html>
