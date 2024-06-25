@@ -33,6 +33,7 @@ interface State {
 }
 
 const TOOLTIP_INDENT = 6;
+const PAGE_SCROLL_WIDTH = 16;
 
 export function connectHOC(WrappedComponent: ComponentClass) {
   return class ButtonHOC extends Component<Props, State> {
@@ -63,6 +64,20 @@ export function connectHOC(WrappedComponent: ComponentClass) {
       return { left: offsetLeft, top: el.offsetHeight + offsetTop };
     }
 
+    private getWindowWidth() {
+      return (window.innerWidth || document.documentElement.clientWidth) - PAGE_SCROLL_WIDTH;
+    }
+
+    private adjustTooltipPosition(el: HTMLElement, currentLeftPosition: number) {
+      const elRightPosition = el.getBoundingClientRect().right;
+      const windowWidth = this.getWindowWidth();
+      const diff = elRightPosition - windowWidth;
+
+      if(diff > 0) {
+        css(el, { left: `${currentLeftPosition - diff}px` });
+      }
+    }
+
     private showTooltip = (el: HTMLElement) => {
       const { tooltip } = this.props.item as ToolbarButtonInfo;
 
@@ -73,6 +88,7 @@ export function connectHOC(WrappedComponent: ComponentClass) {
 
         css(this.props.tooltipRef.current, { display: 'block', left, top });
         this.props.tooltipRef.current.querySelector<HTMLElement>('.text')!.textContent = tooltip;
+        this.adjustTooltipPosition(this.props.tooltipRef.current, bound.left + TOOLTIP_INDENT)
       }
     };
 
